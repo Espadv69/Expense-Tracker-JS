@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', loadExpenses) // toDo
+document.addEventListener('DOMContentLoaded', loadExpenses)
 // DOM elements
 const $expenseName = document.querySelector('.expenseName')
 const $expenseAmount = document.querySelector('.expenseAmount')
