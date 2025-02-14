@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!name || isNaN(amount) || amount <= 0) return
 
     const expense = { name, amount }
-    saveExpense(expense) // toDo
+    saveExpense(expense)
     renderExpense(expense)
     updateTotal() // toDo
 
