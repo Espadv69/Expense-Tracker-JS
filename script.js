@@ -40,4 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     expenses.push(expense)
     localStorage.setItem('expenses', JSON.stringify(expenses))
   }
+
+  function getExpenses() {
+    return JSON.parse(localStorage.getItem('expenses')) || []
+  }
 })
