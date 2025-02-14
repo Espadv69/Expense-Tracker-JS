@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const $deleteBtn = document.createElement('button')
     $deleteBtn.textContent = '🗑️'
-    $deleteBtn.addEventListener('click', () => removeExpense(expense, $li)) // toDo
+    $deleteBtn.addEventListener('click', () => removeExpense(expense, $li))
 
     $li.appendChild($deleteBtn)
     $expenseList.appendChild($li)
@@ -47,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function removeExpense(expense, element) {
     let expenses = getExpenses()
-    expenses = expenses.filter((e) => e.name !== expense.name || e.amount !== expense.amount)
+    expenses = expenses.filter(
+      (e) => e.name !== expense.name || e.amount !== expense.amount
+    )
     localStorage.setItem('expenses', JSON.stringify(expenses))
     element.remove()
     updateTotal() // toDo
