@@ -11,10 +11,11 @@ $addExpenseBtn.addEventListener('click', addExpense)
 function addExpense() {
   const name = $expenseName.value.trim()
   const amount = parseFloat($expenseAmount.value)
+  const date = new Date().toLocaleDateString()
 
   if (!name || isNaN(amount) || amount <= 0) return
 
-  const expense = { name, amount }
+  const expense = { name, amount, date }
   saveExpense(expense)
   renderExpense(expense)
   updateTotal()
@@ -25,7 +26,11 @@ function addExpense() {
 
 function renderExpense(expense) {
   const $li = document.createElement('li')
-  $li.textContent = `${expense.name} - ${expense.amount.toFixed(2)}`
+  $li.innerHTML = `<strong>${
+    expense.name
+  }</strong> - <strong>$${expense.amount.toFixed(2)}</strong> - <small>${
+    expense.date
+  }</small>`
 
   const $deleteBtn = document.createElement('button')
   $deleteBtn.textContent = '🗑️'
