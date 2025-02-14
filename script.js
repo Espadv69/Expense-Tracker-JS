@@ -60,3 +60,8 @@ function updateTotal() {
   const total = expenses.reduce((sum, e) => sum + e.amount, 0)
   $totalAmount.textContent = total.toFixed(2)
 }
+
+function loadExpenses() {
+  getExpenses().forEach(renderExpense)
+  updateTotal()
+}
