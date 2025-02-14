@@ -10,6 +10,10 @@
 }
 
 body {
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+
   font-family:
     'Roboto',
     system-ui,
@@ -26,4 +30,20 @@ body {
 
   color: white;
   background: #121212;
+}
+
+h1,
+h2 {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 450px;
+
+  text-align: center;
+
+  border-bottom: 2px solid lightblue;
+}
+
+h2 {
+  margin-top: 1rem;
 }
