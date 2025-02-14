@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const $expenseList = document.querySelector('.expenseList')
   const $totalAmount = document.querySelector('.totalAmount')
 
-  $addExpenseBtn.addEventListener('click', addExpense) // toDo
+  $addExpenseBtn.addEventListener('click', addExpense)
 
   function addExpense() {
     const name = $expenseName.value.trim()
