@@ -53,7 +53,7 @@ function getExpenses() {
 function removeExpense(expense, element) {
   let expenses = getExpenses()
   expenses = expenses.filter(
-    (e) => e.name !== expense.name || e.amount !== expense.amount
+    (e) => e.name !== expense.name || e.amount !== expense.amount,
   )
   localStorage.setItem('expenses', JSON.stringify(expenses))
   element.remove()
