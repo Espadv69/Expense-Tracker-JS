@@ -34,4 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     $li.appendChild($deleteBtn)
     $expenseList.appendChild($li)
   }
+
+  function saveExpense(expense) {
+    const expenses = getExpenses() // toDo
+    expenses.push(expense)
+    localStorage.setItem('expenses', JSON.stringify(expenses))
+  }
 })
