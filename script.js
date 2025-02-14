@@ -44,4 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function getExpenses() {
     return JSON.parse(localStorage.getItem('expenses')) || []
   }
+
+  function removeExpense(expense, element) {
+    let expenses = getExpenses()
+    expenses = expenses.filter((e) => e.name !== expense.name || e.amount !== expense.amount)
+    localStorage.setItem('expenses', JSON.stringify(expenses))
+    element.remove()
+    updateTotal() // toDo
+  }
 })
