@@ -22,4 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     $expenseName.value = ''
     $expenseAmount.value = ''
   }
+
+  function renderExpense(expense) {
+    const $li = document.createElement('li')
+    $li.textContent = `${expense.name} - ${expense.amount.toFixed(2)}`
+
+    const $deleteBtn = document.createElement('button')
+    $deleteBtn.textContent = '🗑️'
+    $deleteBtn.addEventListener('click', () => removeExpense(expense, $li)) // toDo
+
+    $li.appendChild($deleteBtn)
+    $expenseList.appendChild($li)
+  }
 })
