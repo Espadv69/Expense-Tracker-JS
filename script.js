@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const expense = { name, amount }
     saveExpense(expense) // toDo
-    renderExpense(expense) // toDo
+    renderExpense(expense)
     updateTotal() // toDo
 
     $expenseName.value = ''
