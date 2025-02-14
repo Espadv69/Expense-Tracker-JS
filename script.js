@@ -52,7 +52,7 @@ function removeExpense(expense, element) {
   )
   localStorage.setItem('expenses', JSON.stringify(expenses))
   element.remove()
-  updateTotal() // toDo
+  updateTotal()
 }
 
 function updateTotal() {
